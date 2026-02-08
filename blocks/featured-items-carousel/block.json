@@ -1,0 +1,13 @@
+{
+  "name": "yr/featured-items-carousel",
+  "apiVersion": 3,
+  "title": "Featured Items Carousel",
+  "description": "An auto-scrolling carousel of featured items.",
+  "style": "file:./style.css",
+  "viewScript": "file:./script.js",
+  "icon": "format-gallery",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  }
+}

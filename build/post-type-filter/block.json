@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "yr/post-type-filter",
+  "title": "Post Type Filter",
+  "icon": "menu",
+  "description": "Renders a query loop post template conditionally based on post type.",
+  "usesContext": [
+    "postType",
+    "postId",
+    "generateblocks/loopItem"
+  ],
+  "parent": [
+    "core/post-template",
+    "generateblocks/loop-item"
+  ],
+  "attributes": {
+    "postType": {
+      "type": "string"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

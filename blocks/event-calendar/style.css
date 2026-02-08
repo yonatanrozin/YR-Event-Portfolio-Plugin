@@ -1,0 +1,72 @@
+.wp-block-yr-event-calendar {
+    width: 100%;
+    display: grid; 
+    grid-template-columns: repeat(7, 1fr);
+
+    #calendar-month {
+        grid-column-start: 1; 
+        grid-column-end: 3;
+        select {width: min(100%, 60px);}
+    }
+    #calendar-year {
+        grid-column-start: 3; 
+        grid-column-end: 6;
+        select {width: min(100%, 75px);}
+    }
+    .calendar-date {
+
+        margin: .5rem 0; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap: .4rem;
+        
+        select{
+
+            background: none;
+            padding: 0;
+            font-size: 1.5rem;
+            border: none;
+            outline: none;
+
+            option {
+                font-size: 1.5rem;
+                line-height: 1;
+            }
+        }
+    } 
+
+    .weekday {
+        z-index: 1; 
+        grid-row-start: 2; 
+        text-align: center; 
+    }
+
+    .day {
+		all: unset;
+        aspect-ratio: 5/6; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+		position: relative;
+		transition: background-color .2s ease;
+    }
+	.day.has-event::after {
+		content: '';
+		position: absolute;
+		top: 75%;
+		width: 17%;
+		aspect-ratio: 1;
+		border-radius: 50%;
+	}
+	.day:not(.has-event) {
+		pointer-events: none;
+	}
+	.day.has-event:hover {
+		background-color: rgba(0,0,0,0.1);
+		cursor: pointer;
+	}
+	.day.has-event.queried {
+		outline: 2px solid;
+	}
+}

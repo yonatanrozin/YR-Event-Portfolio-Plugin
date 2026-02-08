@@ -1,0 +1,17 @@
+{
+	"apiVersion": 3,
+	"name": "yr/event-calendar",
+	"title": "Event Calendar",
+	"icon": "calendar-alt",
+	"description": "A monthly calendar which highlights ongoing events.",
+	"supports": {
+		"html": false,
+		"spacing": {"margin": true}
+	},
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "render.php"
+	},
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js"
+}
