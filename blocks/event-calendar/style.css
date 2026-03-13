@@ -6,12 +6,18 @@
     #calendar-month {
         grid-column-start: 1; 
         grid-column-end: 3;
-        select {width: min(100%, 60px);}
+        select {
+			width: min(100%, 60px);
+			color: inherit;
+		}
     }
     #calendar-year {
         grid-column-start: 3; 
         grid-column-end: 6;
-        select {width: min(100%, 75px);}
+        select {
+			width: min(100%, 75px);
+			color: inherit;
+		}
     }
     .calendar-date {
 
