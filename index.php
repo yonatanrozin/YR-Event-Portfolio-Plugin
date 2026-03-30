@@ -179,7 +179,7 @@ add_action( 'acf/include_fields', function() {
                 'aria-label' => '',
                 'type' => 'text',
                 'instructions' => 'The name of the event location/venue.',
-                'required' => 1,
+                'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
                     'width' => '',
@@ -218,7 +218,7 @@ add_action( 'acf/include_fields', function() {
                 'aria-label' => '',
                 'type' => 'textarea',
                 'instructions' => 'Full address of event location, NOT including the name of the venue! Use "location" field above for name of venue.',
-                'required' => 1,
+                'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
                     'width' => '',
