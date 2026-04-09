@@ -19,8 +19,8 @@
 
 	$events = array_map(function($event) {
 		return [
-			'date' => get_field("date", $event),
-			'end_date' => get_field("end_date", $event)
+			'date' => get_field("date", $event, false),
+			'end_date' => get_field("end_date", $event, false)
 		];
 	}, $wp_query->have_posts() ? $wp_query->posts : []);
 	

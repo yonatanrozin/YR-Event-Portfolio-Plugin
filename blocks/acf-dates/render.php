@@ -11,13 +11,12 @@
         $end_date = isset($end_date_field) ? date_create_from_format("Ymd", date("Ymd")) : null;
     }
     else {
-        $date = get_field($date_field, $post_id);
+        $date = get_field($date_field, $post_id, false);
         if (empty($date)) return; 
         $date = date_create_from_format("Ymd", $date);
         if (!empty($end_date_field)) {
-            $end_date = get_field($end_date_field, $post_id);
-            $end_date = $end_date ? date_create_from_format("Ymd", get_field($end_date_field, $post_id))
-                : null;
+            $end_date = get_field($end_date_field, $post_id, false);
+            $end_date = $end_date ? date_create_from_format("Ymd", $end_date) : null;
         }
     }
 

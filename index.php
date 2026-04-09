@@ -71,7 +71,7 @@ add_action('acf/init', function() {
     register_block_type(__DIR__. '/blocks/acf-times');
     register_block_type(__DIR__. '/blocks/event-calendar');
     register_block_type(__DIR__. '/blocks/featured-items-carousel');
-    });
+});
     
 add_action('init', function() {
     register_block_type(__DIR__. '/build/post-type-filter');
@@ -104,7 +104,7 @@ add_action( 'acf/include_fields', function() {
                     'id' => '',
                 ),
                 'display_format' => 'M j, Y',
-                'return_format' => 'Ymd',
+                'return_format' => 'M j, Y',
                 'first_day' => 1,
                 'allow_in_bindings' => 0,
                 'default_to_current_date' => 0,
@@ -124,7 +124,7 @@ add_action( 'acf/include_fields', function() {
                     'id' => '',
                 ),
                 'display_format' => 'M j, Y',
-                'return_format' => 'Ymd',
+                'return_format' => 'M j, Y',
                 'first_day' => 1,
                 'allow_in_bindings' => 0,
                 'default_to_current_date' => 0,
@@ -283,7 +283,7 @@ add_action( 'acf/include_fields', function() {
                 'name' => 'start_date_field_name',
                 'aria-label' => '',
                 'type' => 'text',
-                'instructions' => 'The name of the ACF date containing the (start) date',
+                'instructions' => 'The name of the ACF field containing the start date',
                 'required' => 1,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -304,7 +304,7 @@ add_action( 'acf/include_fields', function() {
                 'name' => 'format',
                 'aria-label' => '',
                 'type' => 'text',
-                'instructions' => 'The PHP date format string to use for the starting date.',
+                'instructions' => 'The PHP date format string to use for the start date.',
                 'required' => 1,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -325,7 +325,7 @@ add_action( 'acf/include_fields', function() {
                 'name' => 'end_date_field_name',
                 'aria-label' => '',
                 'type' => 'text',
-                'instructions' => 'The name of the ACF date containing the end date. Leave blank to hide the end date.',
+                'instructions' => 'The name of the ACF field containing the end date. Leave blank to hide the end date.',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -374,7 +374,7 @@ add_action( 'acf/include_fields', function() {
                 'name' => 'same_year_start_format',
                 'aria-label' => '',
                 'type' => 'text',
-                'instructions' => 'An optional PHP start date format to use if the start and end dates are on the same year.',
+                'instructions' => 'An optional PHP date format to use for the start date if the start and end dates are on the same year.',
                 'required' => 0,
                 'conditional_logic' => array(
                     array(
@@ -658,56 +658,6 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 		'display_title' => '',
 	) );
-    
-    //event list block
-	acf_add_local_field_group( array(
-        'key' => 'group_694eb8ee8d03c',
-        'title' => 'Event List Options',
-        'fields' => array(
-            array(
-                'key' => 'field_694eb8ef0e20d',
-                'label' => 'Gap',
-                'name' => 'gap',
-                'aria-label' => '',
-                'type' => 'number',
-                'instructions' => '',
-                'required' => 1,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => 1,
-                'min' => 0,
-                'max' => '',
-                'allow_in_bindings' => 0,
-                'placeholder' => '',
-                'step' => '.1',
-                'prepend' => '',
-                'append' => 'rem',
-            ),
-        ),
-        'location' => array(
-            array(
-                array(
-                    'param' => 'block',
-                    'operator' => '==',
-                    'value' => 'yr/event-list',
-                ),
-            ),
-        ),
-        'menu_order' => 0,
-        'position' => 'normal',
-        'style' => 'default',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => '',
-        'active' => true,
-        'description' => '',
-        'show_in_rest' => 0,
-        'display_title' => '',
-    ) );
 } );
 
 

@@ -1,17 +1,5 @@
 <?php if ($is_preview): ?>
     <?php 
-        // $pages = get_posts([
-        //     'post_type'  => ['page', 'post'],
-        //     'posts_per_page' => 6,
-        //     'meta_query' => array(
-        //         array(
-        //             'key' => '_thumbnail_id',
-        //             'compare' => 'EXISTS'
-        //         ),
-        //     )
-        // ]); 
-        // $page_ids = wp_list_pluck($pages, 'ID');
-
         $page_ids = get_field("carousel_featured_items", "option");
     ?>
     <InnerBlocks 
