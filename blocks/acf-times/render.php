@@ -31,6 +31,6 @@
     $allowed_blocks = ["generateblocks/shape"];
 
 ?>
-<?php if (!$is_preview): ?><div <?= get_block_wrapper_attributes() ?>><?php endif; ?>
+<?php if (!$is_preview): ?><p <?= get_block_wrapper_attributes() ?>><?php endif; ?>
     <?= $time_str . (isset($end_time_str) ? ' - ' . $end_time_str : '')?>
-<?php if (!$is_preview): ?></div><?php endif; ?>
+<?php if (!$is_preview): ?></p><?php endif; ?>

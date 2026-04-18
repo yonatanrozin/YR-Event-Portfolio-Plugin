@@ -33,6 +33,6 @@
         $end_date_str = $end_date->format(get_field("end_format"));
     }
 ?>
-<?php if (!$is_preview): ?><span <?= get_block_wrapper_attributes() ?>><?php endif; ?>
+<?php if (!$is_preview): ?><p <?= get_block_wrapper_attributes() ?>><?php endif; ?>
     <?= $date_str . (isset($end_date_str) ? ' - ' . $end_date_str : '')?>
-<?php if (!$is_preview): ?></span><?php endif; ?>
+<?php if (!$is_preview): ?></p><?php endif; ?>
