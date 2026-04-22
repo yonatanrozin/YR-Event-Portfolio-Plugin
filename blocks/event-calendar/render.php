@@ -26,6 +26,8 @@
 	
     $months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+	$selected_day_color = get_field("selected_day_color");
+
 ?>
 
 <?php if (!$is_preview): ?><div <?= get_block_wrapper_attributes(); ?>
@@ -82,6 +84,9 @@
         </a>
     <?php endfor; ?>
 	<style>
+		<?php if (empty($selected_day_color)): ?>
+			.wp-block-yr-event-calendar .day {pointer-events: none;}
+		<?php endif; ?>
 		.wp-block-yr-event-calendar .day.has-event::after {
 			background: <?= get_field("has_event_color") ?>;
 		}

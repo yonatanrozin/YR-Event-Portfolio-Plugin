@@ -620,8 +620,8 @@ add_action( 'acf/include_fields', function() {
 				'name' => 'selected_day_color',
 				'aria-label' => '',
 				'type' => 'color_picker',
-				'instructions' => 'Specify the color to use to highlight days with ongoing events.',
-				'required' => 1,
+				'instructions' => 'Specify the color of the selected day outline or leave blank to disable day selection.',
+				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
 					'width' => '',
